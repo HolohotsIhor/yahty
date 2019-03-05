@@ -1,18 +1,5 @@
 $(document).ready(function() {
-	/* Parallax 
-	$('.parallax-window').parallax({imageSrc: 'img/background.jpg'}); */
-
-	/* Resize
-	function heightDetect(){
-		$(".parallax-window").css("height", $(window).height());	
-	}
-	heightDetect();
-	$(window).resize(function(){
-		heightDetect();
-	});
-	 */
-	 
-	 /* Burger */
+	/* Burger */
     $(".toggle_mnu").click(function() {
         $(".sandwich").toggleClass("active");
     });
@@ -35,4 +22,8 @@ $(document).ready(function() {
             $(".top_mnu li a").addClass("fadeInUp animated");
         };
     });
+
+    $('.carousel').carousel({
+      interval: 100000
+    })
 });
