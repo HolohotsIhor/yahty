@@ -6,6 +6,10 @@
 4.  Slider
 5.  Book Items
 6.  Tabs
+7.  Fishing
+8.  Cars
+9.  Form
+10. Footer
 
 */
 
@@ -39,6 +43,7 @@ $dark: #212121;
 $white: #fff;
 $blue: #1a2031;
 $light-blue: #343c53;
+$button-blue: #5f74af;
 
 body {
     color: $blue;
@@ -53,7 +58,8 @@ body {
 section {
     padding: $padding-standart;
     text-align: center;
-    @media only screen and (max-device-width: 767px) {
+
+    @media only screen and (max-device-width: 991px) {
         padding: $padding-small;
     }
 }
@@ -63,6 +69,12 @@ h2 {
     font-size: 2rem;
     font-family: 'Montserrat-Light', sans-serif;
     color: $blue;
+}
+
+h1 {
+    @media only screen and (max-device-width: 767px) {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -211,7 +223,7 @@ header {
                     }
 
                     a:last-child:hover {
-                        background-color: #5f74af;
+                        background-color: $button-blue;
                         color: $white;
                     }
 
@@ -622,13 +634,15 @@ header {
 
 /* 5.  Book Items */
 .book-items {
+    padding-bottom: 0;
 
     @media only screen and (max-device-width: 767px) {
-            padding-top: 20px;
+        padding-top: 20px;
     }
+
     .list {
         margin-top: -300px;
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px;
         background-color: $white;
         width: 100%;
         padding: 40px;
@@ -657,9 +671,17 @@ header {
             border-radius: 10px;
             padding: 10px;
             margin-bottom: 40px;
+            opacity: 0;
+            transition: 1s;
 
             @media only screen and (max-device-width: 991px) {
                 border: none;
+                margin-bottom: 15px;
+            }
+
+            @media only screen and (max-device-width: 767px) {
+                border: none;
+                margin-bottom: 0px;
             }
 
             .image-box,
@@ -807,14 +829,384 @@ header {
                 }
             }
         }
+
+        .catalog-item:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
-/* 6.  Tabs */
+/* 6.  Tabs 
 .tabs{
     padding-top: 0;
 
     .nav.nav-tabs{
         width: 100%;
     }
+}
+*/
+
+/* 7.  Fishing */
+.parallax-mirror {
+    top: -60px;
+}
+
+.fishing {
+    margin-top: -60px;
+    padding-top: 220px;
+
+    @media only screen and (max-device-width: 991px) {
+        padding-bottom: 100px;
+    }
+
+    h1 {
+        text-transform: capitalize;
+        font-size: 46px;
+        font-family: 'Montserrat-Light', sans-serif;
+        color: $white;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+        opacity: 0;
+        transition: 1s;
+
+        @media only screen and (max-device-width: 1199px) {
+            font-size: 38px;
+        }
+
+        @media only screen and (max-device-width: 991px) {
+            font-size: 28px;
+        }
+
+        @media only screen and (max-device-width: 767px) {
+            font-size: 28px;
+        }
+    }
+
+    h1::after {
+        background: url(../img/after-line-light.png) 50% no-repeat;
+        content: '';
+        display: block;
+        margin: 0 auto 15px auto;
+        width: 159px;
+        height: 19px;
+    }
+
+    .button-box {
+        width: 100%;
+        text-align: center;
+
+        a {
+            padding: 23px 55px;
+            background-color: $white;
+            color: $button-blue;
+            display: inline-block;
+            -webkit-border-radius: 30px;
+            border-radius: 60px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: 'Montserrat-regular', sans-serif;
+            line-height: 21px;
+            opacity: 0;
+            transition: 1s;
+
+            @media only screen and (max-device-width: 991px) {
+                padding: 18px 40px;
+                font-size: 13px;
+                line-height: 19px;
+            }
+        }
+
+        a:hover {
+            text-decoration: none;
+            box-shadow: 3.563px 8.863px 20px 0 rgba(0, 0, 0, 0.5);
+        }
+    }
+
+}
+
+/* 8.  Cars */
+.cars {
+
+    .img-box {
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .text-box {
+        padding-top: 40px;
+        @media only screen and (max-device-width: 991px) {
+               margin-bottom: 60px;
+            }
+        
+
+        h2 {
+            text-transform: capitalize;
+            font-size: 35px;
+            font-family: 'Montserrat-Regular', sans-serif;
+            color: $blue;
+            text-align: center;
+            width: 100%;
+            display: block;
+            margin-bottom: 30px;
+            opacity: 0;
+            transition: 1s;
+
+            @media only screen and (max-device-width: 1199px) {
+                font-size: 28px;
+            }
+
+            @media only screen and (max-device-width: 991px) {
+                font-size: 24px;
+                 margin-bottom: 15px;
+            }
+
+            @media only screen and (max-device-width: 767px) {
+                font-size: 22px;
+            }
+        }
+
+        h2::after {
+            background: url(../img/after-line.png) 50% no-repeat;
+            content: '';
+            display: block;
+            margin: 10px auto 15px auto;
+            width: 159px;
+            height: 19px;
+        }
+
+        .button-box {
+            width: 100%;
+            text-align: center;
+
+            a {
+                padding: 22px 55px;
+                background-color: $light-blue;
+                color: $white;
+                display: inline-block;
+                -webkit-border-radius: 30px;
+                border-radius: 60px;
+                -webkit-transition: .2s;
+                -o-transition: .2s;
+                transition: .2s;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-family: 'Montserrat-regular', sans-serif;
+                line-height: 21px;
+                opacity: 0;
+                transition: 1s;
+
+                @media only screen and (max-device-width: 991px) {
+                    padding: 18px 40px;
+                    font-size: 13px;
+                    line-height: 19px;
+                }
+            }
+
+            a:hover {
+                text-decoration: none;
+                box-shadow: 3.563px 8.863px 20px 0 rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
+
+/* 9.  Form */
+.form-box{
+	background-color: $light-blue;
+	color: $white;
+
+	h2{
+		color: $white;
+		text-align: left;
+	}
+
+input, textarea{
+	border-radius: 5px;	
+}
+
+.wpcf7#wpcf7-f8-o1 {
+    width: 100%;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-validation-errors {
+    display: none !important;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form {
+    width: 100%;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form .wpcf7-not-valid-tip {
+    line-height: 35px;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form .menu-550 .wpcf7-not-valid-tip {
+    line-height: 18px;
+    padding-top: 12px;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form .menu-550 .wpcf7-not-valid-tip {
+        line-height: 14px;
+    }
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form .wpcf7-validation-errors,
+.wpcf7#wpcf7-f8-o1 .wpcf7-form .wpcf7-mail-sent-ok {
+    margin-top: 60px;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form .help-develop {
+    float: left;
+    display: block;
+    line-height: 60px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form .help-develop {
+        line-height: 40px;
+    }
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form span.wpcf7-form-control-wrap {
+    display: block;
+    width: 100%;
+    float: left;
+    margin-bottom: 1%;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form span.wpcf7-form-control-wrap {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form .wpcf7-form-control-wrap.menu-valute {
+    width: auto;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form .wpcf7-form-control-wrap.menu-valute {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form span.textarea-text {
+    width: 100%;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p input {
+    width: 100%;
+    float: left;
+    padding: 0.75rem;
+    border: solid 1px #eee;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form p input {
+        width: 100%;
+    }
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p select {
+    height: 40px;
+    margin-top: 10px;
+    float: left;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form p select {
+        margin-top: 0px;
+    }
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p .wpcf7-email {
+    margin-left: 2%;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form p .wpcf7-email {
+        margin-left: 0;
+        margin-top: 2%;
+    }
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p .wpcf7-textarea {
+    margin-top: 2%;
+    padding: 0.75rem;
+    border: solid 1px #eee;
+    width: 100%;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p .wpcf7-textarea,
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p .wpcf7-input {
+    color: #888;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p input:focus,
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p textarea:focus {
+    outline-color: $white;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p .wpcf7-submit {
+    display: block;
+    height: 60px;
+    width: 230px;
+    background-color: $white;
+    border: none;
+    color: $blue;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+    
+    border-radius: 30px;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form p .wpcf7-submit:hover {
+    box-shadow: none;
+    box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form span.textarea-comment {
+    width: 100%;
+}
+
+.wpcf7#wpcf7-f8-o1 .wpcf7-form .menu-valute .wpcf7-not-valid-tip {
+    line-height: 18px;
+    padding-top: 12px;
+}
+
+@media only screen and (max-device-width: 575px) {
+    .wpcf7#wpcf7-f8-o1 .wpcf7-form .menu-valute .wpcf7-not-valid-tip {
+        line-height: 14px;
+    }
+}
+
+
+a{
+	color: $white;
+}
+.contact-info-box{
+	padding-top: 20px;
+}
+}
+/* 10. Footer */
+footer{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: $blue;
+	color: $white;
+	font-size: 11px;
 }

@@ -3,6 +3,7 @@ $(document).ready(function() {
     $(".toggle_mnu").click(function() {
         $(".sandwich").toggleClass("active");
     });
+
     /* Burger. Hover */
     $(".top_mnu ul a").click(function() {
         $(".top_mnu").fadeOut(600);
@@ -26,4 +27,19 @@ $(document).ready(function() {
     $('.carousel').carousel({
       interval: 8000
     })
+
+    /*Scrool animation*/
+    $(window).scroll(function() {
+        $('.mov').each(function() {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 500) {
+                $(this).addClass('fadeIn');
+                $(this).css('opacity', '1');
+            }
+        });
+    });
+
+    /* Easy slide */
+    $("header .top_mnu ul a").mPageScroll2id();
 });
