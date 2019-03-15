@@ -101,7 +101,7 @@ header {
                 margin-bottom: 12px;
             }
 
-            .lang-box.for-mobile{
+            .lang-box.for-mobile {
                 display: none;
 
                 @media only screen and (max-device-width: 767px) {
@@ -961,33 +961,71 @@ header {
         max-height: 740px;
         min-height: 740px;
         width: 100%;
+        padding-top: 300px;
 
         @media only screen and (max-device-width: 1199px) {
             max-height: 540px;
             min-height: 540px;
+            padding-top: 250px;
         }
 
         @media only screen and (max-device-width: 991px) {
             max-height: 400px;
             min-height: 400px;
+            padding-top: 180px;
+        }
+
+        @media only screen and (max-device-width: 545px) {
+            padding-top: 100px;
+        }
+
+        h3{
+            color: $white;
+            font-size: 50px;
+            font-family: 'Montserrat-Regular', sans-serif;
+
+             @media only screen and (max-device-width: 1199px) {
+                font-size: 40px;
+             }
+
+             @media only screen and (max-device-width: 991px) {
+                font-size: 35px;
+             }
         }
     }
 
     .carousel-item:nth-child(1) {
         background: url('../img/1.jpg') 50% no-repeat;
+
+        @media only screen and (max-device-width: 767px) {
+             background: url('../img/1-mobile.jpg') 50% no-repeat;
+        }
     }
 
     .carousel-item:nth-child(2) {
         background: url('../img/2.jpg') 50% no-repeat;
+
+        @media only screen and (max-device-width: 767px) {
+             background: url('../img/2-mobile.jpg') 50% no-repeat;
+        }
     }
 
     .carousel-item:nth-child(3) {
         background: url('../img/3.jpg') 50% no-repeat;
+
+        @media only screen and (max-device-width: 767px) {
+             background: url('../img/3-mobile.jpg') 50% no-repeat;
+        }
     }
 }
 
 /* 5.  Book Items */
 .book-items {
+    padding-top: 80px;
+
+    @media only screen and (max-device-width: 767px) {
+        padding-top: 15px;
+    }
 
     .list {
         border-radius: 10px;
@@ -1278,31 +1316,92 @@ header {
 
 /* Yarlyk */
 .yarlyk {
-    padding: 0;
+    padding: 30px 0;
+    background-color: #f5f5f5;
+    color: $blue;
+    box-shadow: 1px 3.863px 10px 0 rgba(0, 0, 0, 0.3);
 
-    img {
-        max-width: 100%;
-    }
+    .yarlik-item {
 
-    .pc {
-        @media only screen and (max-device-width: 767px) {
-            display: none;
+        @media only screen and (max-device-width: 991px) {
+            margin-bottom: 10px;
         }
+
+        .yarl-box {
+            float: left;
+            font-size: 40px;
+            color: $blue;
+            margin-right: 20px;
+            padding-top: 8px;
+
+            @media only screen and (max-device-width: 1199px) {
+                margin-right: 10px;
+                font-size: 30px;
+            }
+
+            @media only screen and (max-device-width: 991px) {
+                padding-top: 0px;
+            }
+        }
+
+        .text-box {
+            text-align: left;
+            border-right: solid 1px $blue;
+
+            @media only screen and (max-device-width: 991px) {
+                border-right: 0;
+                padding-top:5px;
+            }
+
+            h6 {
+                font-family: 'Montserrat-Bold', sans-serif;
+                font-size: 18px;
+
+                @media only screen and (max-device-width: 991px) {
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+                font-family: 'Montserrat-Light', sans-serif;
+
+                @media only screen and (max-device-width: 1199px) {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+
     }
 
-    .mobile {
-        display: none;
+    .yarlik-item:last-child {
+        @media only screen and (max-device-width: 991px) {
+            .text-box {
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
 
-        @media only screen and (max-device-width: 767px) {
-            display: block;
-            width: 100%;
+        .text-box {
+            border: none;
+        }
+
+        @media only screen and (max-device-width: 991px) {
+            .text-box {
+                p{
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }
 
 /* 8.  Cars */
 .cars {
-
     .vid-trans-item {
         margin-bottom: 20px;
     }
